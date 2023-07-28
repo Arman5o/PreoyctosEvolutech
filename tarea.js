@@ -115,10 +115,3 @@ let contactos = [{
         console.log('El resultado es: ' + resultado);
       }
       
-      // Ejemplos de uso:
-      calcular('suma', a, b); // Imprime: El resultado es: 8
-      calcular('resta', a, b); // Imprime: El resultado es: 3
-      calcular('multiplicacion', a, b); // Imprime: El resultado es: 24
-      calcular('division', a, b); // Imprime: El resultado es: 5
-      calcular('division', a, b); // Imprime: No se puede dividir por cero
-      calcular('potencia', a, b); // Imprime: Operación no válida
