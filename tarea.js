@@ -114,4 +114,5 @@ let contactos = [{
       
         console.log('El resultado es: ' + resultado);
       }
+      hola
       
