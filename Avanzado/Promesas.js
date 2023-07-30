@@ -59,3 +59,4 @@ fetch(url)
 const cuadrado = async function (n) {
     return n * n }
 console.log(cuadrado(4));
+ 
