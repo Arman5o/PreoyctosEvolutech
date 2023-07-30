@@ -56,7 +56,18 @@ fetch(url)
 .catch(error => console.log(error))
 
 //Async await
-const cuadrado = async function (n) {
-    return n * n }
-console.log(cuadrado(4));
- 
+//const cuadrado = async function (n) {
+//    return n * n }
+//const valor = await cuadrado(2)
+//console.log(valor);
+
+let url2 = 'https://rickandmortyapi.com/api/character'
+const fetchData =async ()=>{
+    try {
+        const respuesta = await fetch(url2)
+        const data = await respuesta.json()
+        console.log(data);
+    } catch (error){
+        console.log(error);
+    }}
+fetchData()
