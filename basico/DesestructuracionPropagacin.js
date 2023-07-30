@@ -109,8 +109,9 @@ console.log('Nuevo usuario', copyUser);
 
 //Operador de propagacion con funcion de flecha
 const sumatodNumero=(...args)=>{
+    let suma=0
     for (const n of args) {
-        suma=suma+1;
-    };return suma;
-    console.log(args);}
-sumatodNumero(1,2,3,4,5)
+        suma=suma+n;
+    };return suma;}
+    //console.log(args);
+console.log(sumatodNumero(1,2,3,4,5))
