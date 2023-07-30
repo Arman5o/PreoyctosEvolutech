@@ -1,13 +1,17 @@
-for (let index = 0; index <=7; index++) {
-    console.log(index);
-    
+// FOR
+let num = 15;
+for (let i = 0; i <= num; i++) {
+console.log("%c,", num[i]);
 }
-
-for (let num = 0; num <= 7; num++) {
-    console.log(num +" * "+num+" = "+num*num);
-    
+// WHILE
+let i = 0;
+while (i <= 5){
+    console.log(i);
+    i++;
 }
-
-while (condition) {
-    
-}
+// DO WHILE
+let j = 6;
+do {
+    console.log(j);
+    j++
+} while (j <= 8);

@@ -1,56 +1,65 @@
-if(-1 > 0){
-    console.log("El nnumero 6 es mayor que 0");
-}
-else{
-    console.log("No es mayor");
-}
-
 let edad = 18;
-if(edad >= 18){
-    console.log("si puedes votar");
-}
-else{
-    console.log("no puedes votar");
-}
-
-let a = 2;
-if (a > 0) {
-    console.log(a+ " es un numero positivo");
-}
-else if(a < 0){
-    console.log(a + " es un numero negativo");
-}
-else if (a===0) {
-    console.log(a+ " es un numero cero");
-}
-else{
-    console.log(a + " no es un numero");
-}
-
-let clima = "soleado";
-if (clima === "lluvioso") {
-    console.log("Nesesitas un paraguas");
-    if (clima === "nublado"){
-        console.log("Necesitas una chaquea");
+if (edad >= 18) {
+    console.log("Si puedes votar");} else {
+        console.log("No puedes votar");
     }
-}
-else{
-    console.log("el clima no es valido");
-}
-
-let clima1 = "soleado";
-switch (clima1) {
-    case "lluvioso":
-        console.log("necesitas un paraguas");
-        break;
-    case "nublado":
+    //  if || else if || else
+    let a = -2;
+    if (a > 0) {
+    console.log(a + " es un numero positivo.");} else {
+        console.log(a + " es un munero negativo");
+    }
+    // EJEMPLO DE NUMEROS MAYORES Y MENORES
+    let a1 = 2; let a2 = 'e';
+    if (a1 > a2) {
+    console.log(a1 + " es mayor que " + a2);
+} else if(a1 < a2){
+    console.log(a1 + " es menor que " + a2);
+    } else if (a1 == a2) {
+        console.log("Son numeros son iguales");
+    } else {
+        console.log("No es un numero");
+    }
+    // EJEMPLO DEL CLIMA
+    let clima = 'cuvasco'
+    if (clima == 'lluvioso') {
+        console.log("Necesitas un paraguas");
+    } else if (clima == 'nublado') {
         console.log("Necesitas una chaqueta");
-        break;
-    case "soleado":
+    } else if (clima == "soleado") {
         console.log("Necesitas un sombrero");
-        break;
-
-    default: 
+    } else {
         console.log("El clima no es valido");
-        break;
-}
+    }
+    // EJEMPLO DE LOS "SWITCH"
+    let clima2 = 'a';
+    switch (clima2) {
+        case 'lluviso':
+            console.log("Necesitas un paraguas");
+            break;
+        case 'nublado':
+            console.log("Necesitas una chaqueta");
+            break;
+        case 'soleado':
+            console.log("Necesitas un sombrero");
+            break;
+        default:
+            console.log("El clima no es valido");
+            break;
+    }
+    //EJEMPLO CON NUMEROS
+    let numeros = 5;
+    switch (numeros) {
+        case 1:
+            console.log("El numero es uno");
+            break;
+        case 2:
+            console.log("El numero es dos");
+            break;
+        case 3:
+            console.log("El numero es tres");
+            break;
+        default:
+            console.log("El numero no es valido");
+            break;
+    }
