@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rick and Morty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rick and Morty</h1>
+    <h3>Rick sanches</h3>
+    <div id="characterList"></div>
+    <div id="characterDetails"></div>
+    <script>
+        let characterList = document.getElementById("characterList")
+        let characterDetails = document.getElementById("characterDelails")
+
+        // Funcion para obtener los datps de nuestra API de rick and morty
+        async function fethCharacter(url) {
+            try {
+                const respuesta = await fetch(url)
+                return await response.json()
+            } catch (error) {
+                console.log(("Error en la peticon ", error));
+            }
+            if (data && data.results) {
+                characterList.innerHTML=''
+                data.results.forEach(character => {
+                    const characterCard = document.createElement("div")
+                    characterCard.classList.add('characterCard')
+                    characterCard.innerHTML=`
+                    <img src ="${charcter.image}" alt ="${character.name}">
+                    <p>${character.name}</p>
+                    `
+                });
+            }
+        }
+    </script>
+</body>
+</html>
