@@ -61,6 +61,57 @@ console.log(calcularPerimetro1(rectangulo2));
 // Pobjeto de desestrucyuracion durante la iteracion
 const todolist=[{
     task:'Estudiar modulo 1',
-    time:'2/43/2023',
+    time:'2/03/2023',
     completed:false
-}]
+},{
+    task:'Estudiar modulo 2',
+    time:'4/03/2023',
+    completed:true
+},{
+    task:'Estudiar modulo 3',
+    time:'6/03/2023',
+    completed:false
+}];
+console.log(todolist);
+for (const {task,time,completed} of todolist) {
+    console.log(task, time, completed);
+}
+
+// OPERADOR DE PROPAGACION
+let nums = [1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10]
+let [n1, n2, n3,...resto ] = nums
+console.log(resto);
+
+//Operador de propagacion para copiar arreglos
+const pares =[0,2,4,6,8,10]
+const impares = [1,3,5,7,9]
+const Numeroapares = pares
+console.log(Numeroapares);
+Numeroapares.push(12,14)
+console.log(Numeroapares);
+const todoNumero = [...pares,...impares]
+console.log('todos los numeros', todoNumero);
+
+//Operador de extencion paara copiar objetos
+let user = {
+    name:'john',
+    age:'43',
+    country:'Bolivia',
+    city:'Cochabamba'}
+let newUser = user
+console.log(newUser);
+newUser.phone=71772111
+console.log(newUser, "new",user);
+let copyUser={...user}
+console.log('copia de usuario', copyUser);
+copyUser.correo='agr@gmail.com'
+console.log('Nuevo usuario', copyUser);
+
+//Operador de propagacion con funcion de flecha
+const sumatodNumero=(...args)=>{
+    let suma=0
+    for (const n of args) {
+        suma=suma+n;
+    };return suma;}
+    //console.log(args);
+console.log(sumatodNumero(1,2,3,4,5))
