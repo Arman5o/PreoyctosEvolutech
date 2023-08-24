@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Rick and Morty</title>
     <link rel="stylesheet" href="style.css">
@@ -23,6 +24,12 @@
             } catch (error) {
                 console.log(("Error en la peticon ", error));
             }
+        }
+            // Funcion para mostrar los personajes en una lista
+            async function showCharacter(){
+                const apiUrl = "https://rickandmortyapi.com/api/character"
+                const data = await fethCharacter(apiUrl)
+            
             if (data && data.results) {
                 characterList.innerHTML=''
                 data.results.forEach(character => {
@@ -33,9 +40,22 @@
                     <p>${character.name}</p>
                     `
                    // characterCard.addEventListener("click",()=>)
+                   characterCard.addEventListener("click",()=> showCharacterDeatils(character) )
+                characterListContainer.appendChild(characterCard)
                 });
             }
-        }
+            }
+    //funcion para mostrar los detalles del personaje
+    function showCharacterDeatils(character) {
+        characterDetailsContainer.innerHTML=`
+    <h2> ${character.name}</h2>
+    <img src="${character.image}" alt="${character.name}">
+    <p><strong> Status : </strong> ${character.status}</p>
+    <p><strong> Species : </strong> ${character.species}</p>
+    <p><strong> Gender : </strong> ${character.gender}</p>
+    `}
+    //Cargar la lsita de personajes 
+    showCharactersList()
     </script>
 </body>
 </html>
