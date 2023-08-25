@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500&display=swap"
+        rel="stylesheet" />
+
+    <title>Example</title>
+    <style>
+        /* == General style === */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        html,
+        body {
+            height: 100%;
+            line-height: 1.5;
+            font-family: 'Montserrat';
+            font-weight: 300;
+            color: black;
+        }
+
+        .root {
+            min-height: 100%;
+            position: relative;
+        }
+
+        .header-wrapper,
+        .main-wrapper,
+        .footer-wrapper {
+            width: 85%;
+            margin: auto;
+        }
+
+        .header-wrapper,
+        .main-wrapper {
+            padding: 10px;
+            margin: 2px auto;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 300;
+        }
+
+        h2,h3 {
+            font-weight: 300;
+        }
+        h4 {
+            font-weight: 300;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .header1-wrapper {
+            background-color: #0b4554;
+            padding: 10px;
+        }
+
+        main {
+            padding: 10px 10px 60px;
+        }
+
+        ul {
+            margin-left: 15px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background: rgb(14, 77, 108);
+        }
+
+        .footer-wrapper {
+            font-weight: 400;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const rootElement = document.querySelector('.root')
+        // JSX element, header
+        const bienvenida ='Bienvenido a mi portafolio en línea'
+        const mentor = {
+            nombre: 'Armando',
+            apellido: 'Gamboa',
+            apellido1: 'Orellana'
+        }
+        const carrera = 'Ingenieria de Sistemas'
+        const semestre = 'Tercero'
+        const info = 'Escuela Militar de Ingenieria (EMI),'
+        const date = 'Agosto 2023'
+        
+        const añoNacimiento = 2004
+        const añoActual = new Date().getFullYear()
+        const edad = añoActual - añoNacimiento
+        const personaEdad = (
+            <p>
+                {' '}
+                {mentor.nombre} {mentor.lastName} tiene {edad} años
+            </p>
+        )
+        const header = (
+            <header>
+                <h1>Mi Portafolio</h1>
+                <p>{bienvenida}</p>
+                </header>
+        )
+
+        const header1 = (
+            <header>
+                <div className='header1-wrapper'>
+                    <h1>{mentor.nombre} {mentor.apellido} {mentor.apellido1}</h1>
+                    <img src="perfil.jpeg" alt="Mi Foto de Perfil" className="profile-image" width="160" height="170"/>
+                    <h2>Estudiante: {carrera}</h2>
+                    <h3>Informacion....</h3>
+                    <h4>{info} Semestre: {semestre}</h4>
+                    <h4><ul>{personaEdad}</ul></h4>
+                    
+                    <p>
+                        
+                    </p>
+                    <small>Date: {date}</small>
+                </div>
+            </header>
+        )
+
+        const trabajo = 'Ninguna'
+        const main = (
+            <main>
+                <div className='main-wrapper'>
+                    <strong><p>
+                        TRABAJO LABORAL
+                    </p></strong>
+                        <ul>{trabajo}</ul>
+                        <br/>
+                    <strong><p>
+                        SKILLS
+                    </p></strong> <br/>
+                    
+                    <img src="html.png" alt="HTML" className="profile-image" width="150" height="120" />
+                    <img src="https://www.javatpoint.com/images/javascript/javascript_logo.png" alt="JavaScript" className="profile-image" width="150" height="100" />
+                    <img src="css.png" alt="CSS" className="profile-image" width="120" height="100"  />
+                    <br/>
+                    <img src="https://image.digitalinsightresearch.in/uploads/imagelibrary/cbr/java.jpg" alt="java" className="profile-image" width="170" height="80" />
+                </div>
+            </main>
+        )
+
+        const copyRight = 'Copyright 2023'
+
+        const footer = (
+            <footer>
+                <div className='footer-wrapper'>
+                    <p><strong>{copyRight}</strong></p>
+                </div>
+            </footer>
+        )
+
+        const app = (
+            <div className='app'>
+                {header}
+                {header1}
+                {main}
+                {footer}
+            </div>
+        )
+
+        ReactDOM.render(app, rootElement)
+    </script>
+</body>
+
+</html>
